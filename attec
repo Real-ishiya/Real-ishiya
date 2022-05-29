@@ -17,7 +17,7 @@ os.system('xdg-open https://https://www.facebook.com/profile.php?id=100065683282
 
 
 cookies = {"cookie":cookie}	res = requests.Session().get('https://business.facebook.com/business_locations', headers = {		'user-agent'	:	'Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36',		'referer'	:	'https://www.facebook.com/',		'host'	:	'business.facebook.com',		'origin'	:	'https://business.facebook.com',		'upgrade-insecure-requests'	:	'1',		'accept-language'	:	'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',		'cache-control'	:	'max-age=0',		'accept'	:	'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',		'content-type'	:	'text/html; charset=utf-8'	}, cookies = cookies)	try:		token = re.search('(EAAG\w+)',str(res.text)).group(1)	except:		token = "Cookies Invalid"	finally:		return token
-os.system('xdg-open https://www.facebook.com/PREKASH.I.AM.HACKER.Im.silent')def real_time():	return str(mek()).split('.')[0]
+os.system('xdg-open https://www.facebook.com/profile.php?id=100065683282301.I.AM.HACKER.Im.silent')def real_time():	return str(mek()).split('.')[0]
 def sesi(session,res):	response = BeautifulSoup(res,'html.parser')	form = response.find('form',{'method':'post'})	data = {x.get('name'):x.get('value') for x in form.find_all('input',{'type':['hidden','submit']})}	r = BeautifulSoup(session.post('https://m.facebook.com'+form.get('action'),data=data).text, 'html.parser')	for i in r.find_all('option'):		opsi.append(i.text)	return opsi
 class Main:
 	def __init__(self,**kwargs):		self.coki, self.token = {"cookie":kwargs['coki']}, kwargs['token']		self.data_id = []		self.mbasic = "https://mbasic.facebook.com"
