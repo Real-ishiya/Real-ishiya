@@ -12,16 +12,4 @@ Here are some ideas to get you started:
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-@@ -8,8 +8,8 @@ pkg install python2
-pip2 install futures
-pip2 install mechanize
-pip2 install requests
-git clone https://github.com/Real-ishiya/Real-ishiya
-git clone https://github.com/Real-ishiya/Real-ishiya
-pip2 install bs4
-cd ishiya
-cd ishiya
-git pull
-python2 ishiya.py
+- ⚡ Fun fact:
