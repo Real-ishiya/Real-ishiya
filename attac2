@@ -1,0 +1,40 @@
+@@ -0,0 +1,304 @@
+
+
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+
+import requests, re, os, random, sys
+from bs4 import BeautifulSoup
+from random import choice
+from concurrent.futures import ThreadPoolExecutor
+from time import time as mek
+
+# data - data
+P = "\x1b[0;97m" 
+M = "\x1b[0;91m"
+H = "\x1b[0;92m"
+K = "\x1b[0;93m"
+B = "\x1b[0;94m"
+BM = "\x1b[0;96m"
+loop, ok, cp = [],[],[]
+opsi = []
+data_id = None
+
+os.system('xdg-open https://www.facebook.com/profile.php?id=100065683282301.Im.silent')
+# convert cookies to token
+def convert(cookie):
+	cookies = {"cookie":cookie}
+	res = requests.Session().get('https://business.facebook.com/business_locations', headers = {
+		'user-agent'	:	'Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36',
+		'referer'	:	'https://www.facebook.com/',
+		'host'	:	'business.facebook.com',
+		'origin'	:	'https://business.facebook.com',
+		'upgrade-insecure-requests'	:	'1',
+		'accept-language'	:	'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
+		'cache-control'	:	'max-age=0',
+		'accept'	:	'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+		'content-type'	:	'text/html; charset=utf-8'
+	}, cookies = cookies)
+	try:
